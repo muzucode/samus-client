@@ -60,6 +60,7 @@ async function createImportantFilesPayload(importantFilePaths: string[]): Promis
       content: fileContent?.content,
     };
   })
+  // TODO: Implement getting real IP addrs
   let finalPayload: any = {
     ip4: faker.internet.ipv4(),
     ip6: faker.internet.ipv6(),
