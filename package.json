@@ -2,6 +2,9 @@
   "name": "samus",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "build": "bun build index.ts --compile --outfile samus-client"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
