@@ -1,15 +1,3 @@
-# samus
+# samus-client
 
-To install dependencies:
-
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.0.33. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Fetches a list of important files to search for from the `samus-server` and then sends the output back to the C2 over HTTPS.

